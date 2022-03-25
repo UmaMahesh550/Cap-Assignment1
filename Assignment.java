@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class Assignment {
+    
+//         Finding Minimum and Maximum Elements of an Array.
     static void minMax(int[] ar)
     {
         int min=ar[0];
@@ -23,6 +25,8 @@ public class Assignment {
         }
         System.out.println("Minimum Element : "+min+"\nMaximum Element : "+max);
     }
+    
+//         Reversing the Array Elements.
     static void revArr(int[] ar)
     {
         int n= ar.length;
@@ -36,11 +40,15 @@ public class Assignment {
         System.out.println("Reversed Array :\n"+Arrays.toString(ar));
 
     }
+    
+//         Sorting the Array Elements in Ascending Order.
     static void sortArr(int[] ar)
     {
         Arrays.sort(ar);
         System.out.println("Sorted Array : \n"+Arrays.toString(ar));
     }
+    
+//         Read the content of one File and Write the same to other file.
     static void fileReadWrite() throws IOException
     {
         File file = new File("C:\\CapSpace\\src\\com\\company\\capgemini\\Assignment\\Content.txt");
@@ -55,6 +63,8 @@ public class Assignment {
         writer.flush();
         System.out.println("File content copied and written successfully.");
     }
+    
+//         Sorting the Map in Ascending order of the key values of the map.
     static void mapKeySort() {
         Map<String, String> map = new HashMap<>();
         map.put("10", "Teju");
@@ -70,27 +80,29 @@ public class Assignment {
             System.out.println(entry.getKey()+"  "+entry.getValue());
         }
     }
-        public static void main (String[]args){
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter number of elements : ");
-            int n = sc.nextInt();
-            int[] arr = new int[n];
-            System.out.println("Enter the Array Elements :");
-            for (int i = 0; i < n; i++)
-                arr[i] = sc.nextInt();
-            System.out.println("========First Problem.========");
-            minMax(arr);
-            System.out.println("========Second Problem.========");
-            revArr(arr);
-            System.out.println("========Third Problem.========");
-            sortArr(arr);
-            System.out.println("========Fourth Problem.========");
-            try {
-                fileReadWrite();
-            } catch (IOException e) {
-                System.out.println("Invalid Files.");
-            }
-            System.out.println("========Fifth Problem.========");
-            mapKeySort();
+    
+//     Main Method
+    public static void main (String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements : ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the Array Elements :");
+        for (int i = 0; i < n; i++)
+        arr[i] = sc.nextInt();
+        System.out.println("========First Problem.========");
+        minMax(arr);
+        System.out.println("========Second Problem.========");
+        revArr(arr);
+        System.out.println("========Third Problem.========");
+        sortArr(arr);
+        System.out.println("========Fourth Problem.========");
+        try {
+            fileReadWrite();
+        } catch (IOException e) {
+            System.out.println("Invalid Files.");
         }
+        System.out.println("========Fifth Problem.========");
+        mapKeySort();
     }
+}
